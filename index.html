@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ChronoBot FAQ</title>
-  <meta name="description" content="ChronoBot FAQ: setup, permissions, countdown channel, reminders, troubleshooting, and support." />
+  <meta name="description" content="ChronoBot FAQ: setup, permissions, countdown channel, reminders, vote-locked supporter features, troubleshooting, and support." />
   <style>
     :root{
       --bg:#0b1020;
@@ -180,7 +180,7 @@
           <div>
             <h1>ChronoBot FAQ</h1>
             <div class="sub">
-              Setup, permissions, countdown channel behavior, reminders, troubleshooting, and support.
+              Setup, permissions, countdown channel behavior, reminders, vote-locked supporter features, troubleshooting, and support.
               Built for real servers, not theoretical ones.
             </div>
           </div>
@@ -220,7 +220,7 @@
       <div class="card" style="margin-top:16px">
         <div class="cardhead">
           <div class="search">
-            <input id="search" type="search" placeholder="Search FAQs (example: permissions, pinned message, timezone, /remindall)…" />
+            <input id="search" type="search" placeholder="Search FAQs (example: vote, supporter, theme, banner, permissions, pinned message)…" />
           </div>
           <div class="count"><span id="matchCount">0</span> shown</div>
         </div>
@@ -253,6 +253,185 @@
               </p>
               <p>
                 If the bot can’t send or pin messages, setup will fail silently in most servers — that’s a permissions issue, not a “mystery bug.”
+              </p>
+            </div>
+          </details>
+
+          <!-- NEW: Supporter Perks (Vote-Locked) -->
+          <details data-tags="supporter perks vote locked voting top.gg premium premium features supporter">
+            <summary>
+              <span class="q">What are “Supporter Perks” (vote-locked features)?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                ChronoBot is free to use, and the core countdown system is available to everyone.
+                “Supporter Perks” are the optional premium-quality tools (themes, templates, banners, and more) that unlock after you vote for ChronoBot on Top.gg.
+              </p>
+              <p>
+                Voting is free — it’s just a quick way to support the bot and help more servers find it.
+                Run <code>/vote</code> for the vote button and to confirm your supporter status.
+              </p>
+            </div>
+          </details>
+
+          <details data-tags="vote how to vote top.gg supporter perks unlock">
+            <summary>
+              <span class="q">How do I unlock vote-locked features?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                1) Run <code>/vote</code> in your server.<br/>
+                2) Tap the Vote button (Top.gg will open).<br/>
+                3) Come back and run <code>/vote</code> again to confirm you’re unlocked.
+              </p>
+              <p>
+                If Top.gg needs a moment to update, wait a minute and retry.
+              </p>
+            </div>
+          </details>
+
+          <details data-tags="supporter perks list premium features theme milestones advanced templates banner digest">
+            <summary>
+              <span class="q">Which features are vote-locked (Supporter Perks)?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>Voting unlocks premium tools like:</p>
+              <ul>
+                <li><strong>Themes</strong>: <code>/theme</code> (changes the look/feel of the pinned countdown embed)</li>
+                <li><strong>Advanced server milestones</strong>: <code>/milestones advanced</code> (set your default reminder schedule once)</li>
+                <li><strong>Event templates</strong>: <code>/template save</code> + <code>/template load</code> (reuse your perfect setup)</li>
+                <li><strong>Event banners</strong>: <code>/banner set</code> (adds a hero image to the pinned embed)</li>
+                <li><strong>Weekly digest</strong>: <code>/digest enable</code> (automatic weekly “what’s coming up” post)</li>
+              </ul>
+              <p>
+                These are designed to feel like “server quality-of-life upgrades”: less repetition, more customization, and nicer presentation.
+              </p>
+            </div>
+          </details>
+
+          <details data-tags="theme supporter perk premium themes neon minimal dramatic default">
+            <summary>
+              <span class="q">What do themes do?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                Themes change the vibe of the pinned countdown embed — title styling, wording, color accents, and overall presentation.
+              </p>
+              <p>
+                Examples:
+              </p>
+              <ul>
+                <li><code>/theme theme: neon</code> — bold, energetic presentation</li>
+                <li><code>/theme theme: minimal</code> — clean, quiet, simple</li>
+                <li><code>/theme theme: dramatic</code> — theatrical “time is inevitable” energy</li>
+                <li><code>/theme theme: default</code> — classic Chrono purple</li>
+              </ul>
+            </div>
+          </details>
+
+          <details data-tags="milestones advanced supporter perk default milestones schedule apply to all">
+            <summary>
+              <span class="q">What does “Milestones Advanced” do?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                <code>/milestones advanced</code> sets your server’s default milestone reminder schedule (example: 100, 60, 30, 14, 7, 2, 1, 0).
+                You can also apply that new list to all existing events so everything stays consistent.
+              </p>
+              <p>
+                Example:
+                <code>/milestones advanced milestones: 100, 60, 30, 14, 7, 2, 1, 0 apply_to_all: true</code>
+              </p>
+            </div>
+          </details>
+
+          <details data-tags="template supporter perk save load reuse presets">
+            <summary>
+              <span class="q">What are templates, and why would I use them?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                Templates let you save an event’s “setup style” (milestones, repeating reminders, silenced state) and reuse it instantly for new events.
+                Perfect for weekly game nights, monthly meetings, recurring community events, and anything you don’t want to rebuild from scratch.
+              </p>
+              <p>
+                Examples:
+              </p>
+              <ul>
+                <li><code>/template save index: 1 name: Weekly Meetup</code></li>
+                <li><code>/template load name: Weekly Meetup date: 01/15/2026 time: 19:00 event_name: Weekly Meetup</code></li>
+              </ul>
+            </div>
+          </details>
+
+          <details data-tags="banner supporter perk image url direct link hero image pinned embed">
+            <summary>
+              <span class="q">How do banners work (and what kind of URL do I need)?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                Banners add a hero image to the pinned countdown embed. ChronoBot will display the banner for the <strong>next upcoming</strong> event
+                that has a banner set.
+              </p>
+              <p>
+                Use a <strong>direct image URL</strong> (typically ends in <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, or <code>.webp</code>).
+              </p>
+              <p>
+                Example:
+                <code>/banner set index: 1 url: https://example.com/mybanner.png</code>
+              </p>
+              <p>
+                If your banner isn’t showing, common causes are:
+              </p>
+              <ul>
+                <li>The link is not a direct image URL</li>
+                <li>The event with the banner is not the next upcoming event</li>
+                <li>The event is in the past (past events don’t display as “upcoming”)</li>
+              </ul>
+            </div>
+          </details>
+
+          <details data-tags="digest supporter perk weekly digest enable schedule next 7 days">
+            <summary>
+              <span class="q">What is the weekly digest?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                The weekly digest posts a roundup of events happening in the next 7 days. Great for active servers where people miss individual reminders.
+              </p>
+              <p>
+                Enable it with: <code>/digest enable</code>
+              </p>
+              <p>
+                If it didn’t post, check that the bot can send messages in the configured channel and that digest is enabled.
+              </p>
+            </div>
+          </details>
+
+          <details data-tags="voted but locked supporter perk not working cache status">
+            <summary>
+              <span class="q">I voted, but features still say “locked.” What do I do?</span>
+              <span class="tag">Troubleshooting</span>
+            </summary>
+            <div class="a">
+              <p>
+                Quick checklist:
+              </p>
+              <ul>
+                <li>Run <code>/vote</code> again (it confirms supporter access).</li>
+                <li>Wait a minute and retry — vote checks may be briefly cached to reduce spam.</li>
+                <li>Make sure you voted on Top.gg while logged into the same Discord account you’re using in the server.</li>
+              </ul>
+              <p>
+                If it still won’t unlock, post in the support server with your Discord username and a screenshot of the issue.
               </p>
             </div>
           </details>
@@ -319,11 +498,8 @@
             </summary>
             <div class="a">
               <p>
-                Depending on configuration, passed events may be marked as completed/expired and removed from active countdowns.
-                Some servers prefer auto-cleanup to keep lists fresh; others keep history.
-              </p>
-              <p>
-                If you’re unsure what your server is currently set to do, check the bot’s event list after an event passes—or ask in the support server.
+                Passed events are automatically cleaned up after they start (with a short grace window), so the pinned countdown stays fresh.
+                If your server prefers manual cleanup, you can also use <code>/archivepast</code>.
               </p>
             </div>
           </details>
@@ -336,7 +512,7 @@
             </summary>
             <div class="a">
               <p>
-                Reminders are scheduled notifications for upcoming events. Some reminders fire at milestone intervals (for example: days/hours before),
+                Reminders are scheduled notifications for upcoming events. Some reminders fire at milestone intervals (for example: days before),
                 and some can target a channel, role, or everyone depending on your server configuration and Discord permissions.
               </p>
               <p>
