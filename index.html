@@ -375,24 +375,25 @@
 
 		  <!-- Permissions -->
 		  <details data-tags="permissions setup send messages embed links pin messages read message history manage messages">
-			<summary>
-			  <span class="q">Which permissions does ChronoBot need?</span>
-			  <span class="tag">Permissions</span>
-			</summary>
-			<div class="a">
-			  <p>In the countdown channel, ChronoBot typically needs:</p>
-			  <ul>
-				<li><strong>View Channel</strong></li>
-				<li><strong>Send Messages</strong></li>
-				<li><strong>Embed Links</strong></li>
-				<li><strong>Read Message History</strong> (to find/update its pinned message)</li>
-				<li><strong>Pin Messages</strong> or <strong>Manage Messages</strong> (if pinning is used)</li>
-			  </ul>
-			  <p>
-				If commands work but nothing posts, check channel permission overrides first. Discord’s permission layering is… dramatic.
-			  </p>
-			</div>
-		  </details>
+			  <summary>
+			    <span class="q">Which permissions does ChronoBot need?</span>
+			    <span class="tag">Permissions</span>
+			  </summary>
+			  <div class="a">
+			    <p>In the countdown channel, ChronoBot typically needs:</p>
+			    <ul>
+			      <li><strong>View Channel</strong></li>
+			      <li><strong>Send Messages</strong></li>
+			      <li><strong>Embed Links</strong></li>
+			      <li><strong>Read Message History</strong> (to find/update its pinned message)</li>
+			      <li><strong>Pin Messages</strong> or <strong>Manage Messages</strong> (if pinning is used)</li>
+			      <li><strong>Manage Messages</strong> (to auto-delete milestone announcements and repeating reminders after the event)</li>
+			    </ul>
+			    <p>
+			      If commands work but nothing posts, check channel permission overrides first. Discord’s permission layering is… dramatic.
+			    </p>
+			  </div>
+			</details>
 
 		  <details data-tags="pinned message cannot access create permissions 403 forbidden read history pin">
 			<summary>
@@ -435,8 +436,12 @@
 			</summary>
 			<div class="a">
 			  <p>
-				Past events are typically auto-cleaned after they pass (often with a small grace window),
-				keeping the pinned countdown fresh. If your server prefers manual cleanup, use <code>/archivepast</code>.
+				When an event passes, the pinned countdown will move on to the next upcoming event.
+				To keep the channel tidy, ChronoBot can also clean up reminder posts after the event.
+			  </p>
+			  <p>
+				<strong>Reminder cleanup:</strong> milestone announcements and repeating reminders stay visible while the event is upcoming,
+				then they’re deleted <strong>24 hours after the event time</strong> (if the bot has permission to delete messages).
 			  </p>
 			</div>
 		  </details>
@@ -454,6 +459,34 @@
 			  </p>
 			  <p>
 				If reminders don’t ping who you expect, confirm role mentions are allowed and the bot is permitted to mention them in that channel.
+			  </p>
+			</div>
+		  </details>
+
+		  <!-- ✅ NEW: Auto-cleanup FAQ -->
+		  <details data-tags="reminders cleanup auto delete milestone announcements repeating reminders clutter 24 hours manage messages">
+			<summary>
+			  <span class="q">Do milestone announcements and repeating reminders get deleted?</span>
+			  <span class="tag">Reminders</span>
+			</summary>
+			<div class="a">
+			  <p>
+				Yes. To prevent the countdown channel from getting cluttered, ChronoBot can automatically clean up its reminder posts.
+			  </p>
+			  <p>
+				<strong>How it works:</strong>
+			  </p>
+			  <ul>
+				<li>Milestone announcements and repeating reminders stay visible while the event is upcoming.</li>
+				<li>After the event time passes, ChronoBot deletes those reminder posts <strong>24 hours later</strong>.</li>
+			  </ul>
+			  <p>
+				<strong>Required permission:</strong> ChronoBot needs <code>Manage Messages</code> in the countdown channel to delete messages.
+				If the bot can’t delete messages due to permissions, the reminders will remain.
+			  </p>
+			  <p>
+				<strong>Note:</strong> Auto-cleanup applies to reminder messages ChronoBot can track. Older reminder messages posted before this feature
+				may require manual cleanup.
 			  </p>
 			</div>
 		  </details>
