@@ -194,25 +194,27 @@
       </div>
 
       <div class="cta">
-        <!-- Replace these with your real links -->
-	  	<a class="btn" href="chronobot.html">
-		  <div>
-		    <strong>ChronoBot</strong><br/>
-		    <small>Features • Free vs Paid</small>
-		  </div>
-		</a>
+        <a class="btn" href="chronobot.html">
+          <div>
+            <strong>ChronoBot</strong><br/>
+            <small>Features • Free vs Paid</small>
+          </div>
+        </a>
+
         <a class="btn" href="https://discord.gg/u48GdQuMQr" target="_blank" rel="noreferrer">
           <div>
             <strong>Join Support Server</strong><br/>
             <small>Help • Suggestions • Bug reports</small>
           </div>
         </a>
+
         <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1444691854494011576" target="_blank" rel="noreferrer">
           <div>
             <strong>Invite ChronoBot</strong><br/>
             <small>Add to your server</small>
           </div>
         </a>
+
         <a class="btn" href="https://top.gg/bot/1444691854494011576?s=096073a039be0" target="_blank" rel="noreferrer">
           <div>
             <strong>Top.gg Listing</strong><br/>
@@ -233,353 +235,374 @@
 
         <div class="sections" id="faqRoot">
 
-		  <!-- Getting Started -->
-		  <details data-tags="getting started basics invite">
-			<summary>
-			  <span class="q">What is ChronoBot?</span>
-			  <span class="tag">Getting Started</span>
-			</summary>
-			<div class="a">
-			  <p>
-				ChronoBot helps servers track events with countdowns and reminders. It keeps one pinned “source of truth”
-				for upcoming dates, plus automated reminders so your server doesn’t get haunted by “wait when is it again?”
-				every five minutes.
-			  </p>
-			</div>
-		  </details>
+          <!-- Getting Started -->
+          <details data-tags="getting started basics invite">
+            <summary>
+              <span class="q">What is ChronoBot?</span>
+              <span class="tag">Getting Started</span>
+            </summary>
+            <div class="a">
+              <p>
+                ChronoBot helps servers track events with countdowns and reminders. It keeps one pinned “source of truth”
+                for upcoming dates, plus automated reminders so your server doesn’t get haunted by “wait when is it again?”
+                every five minutes.
+              </p>
+            </div>
+          </details>
 
-		  <details data-tags="getting started setup first steps event channel pinned">
-			<summary>
-			  <span class="q">What do I need to set up first?</span>
-			  <span class="tag">Getting Started</span>
-			</summary>
-			<div class="a">
-			  <p><strong>Three-step setup:</strong></p>
-			  <ul>
-				<li>Pick your events channel → <code>/seteventchannel</code></li>
-				<li>Add an event → <code>/addevent</code></li>
-				<li>Confirm the pinned countdown appears and updates</li>
-			  </ul>
-			  <p>
-				If the pinned message doesn’t appear, it’s almost always a channel permission issue.
-				Check <code>View Channel</code>, <code>Send Messages</code>, <code>Embed Links</code>,
-				<code>Read Message History</code>, and <code>Pin Messages</code>/<code>Manage Messages</code>.
-			  </p>
-			</div>
-		  </details>
+          <details data-tags="getting started setup first steps event channel pinned">
+            <summary>
+              <span class="q">What do I need to set up first?</span>
+              <span class="tag">Getting Started</span>
+            </summary>
+            <div class="a">
+              <p><strong>Three-step setup:</strong></p>
+              <ul>
+                <li>Pick your events channel → <code>/seteventchannel</code></li>
+                <li>Add an event → <code>/addevent</code></li>
+                <li>Confirm the pinned countdown appears and updates</li>
+              </ul>
+              <p>
+                If the pinned message doesn’t appear, it’s almost always a channel permission issue.
+                Check <code>View Channel</code>, <code>Send Messages</code>, <code>Embed Links</code>,
+                <code>Read Message History</code>, and <code>Pin Messages</code>/<code>Manage Messages</code>.
+              </p>
+            </div>
+          </details>
 
-		  <details data-tags="commands list cheat sheet quick reference slash commands">
-			<summary>
-			  <span class="q">Command cheat sheet (most used)</span>
-			  <span class="tag">Commands</span>
-			</summary>
-			<div class="a">
-			  <p><strong>Setup:</strong> <code>/seteventchannel</code> • <code>/healthcheck</code></p>
-			  <p><strong>Create:</strong> <code>/addevent</code></p>
-			  <p><strong>Browse:</strong> <code>/listevents</code> • <code>/nextevent</code> • <code>/eventinfo</code></p>
-			  <p><strong>Edit:</strong> <code>/editevent</code> • <code>/dupeevent</code> • <code>/removeevent</code></p>
-			  <p><strong>Reminders:</strong> <code>/remindall</code> • <code>/setmilestones</code> • <code>/resetmilestones</code> • <code>/silence</code></p>
-			  <p><strong>Customization:</strong> <code>/theme</code> • <code>/banner set</code> • <code>/banner clear</code></p>
-			  <p><strong>Supporter:</strong> <code>/vote</code> • <code>/vote_debug</code></p>
-			  <p><strong>Maintenance:</strong> <code>/update_countdown</code> • <code>/resendsetup</code> • <code>/purgeevents</code></p>
-			</div>
-		  </details>
+          <details data-tags="commands list cheat sheet quick reference slash commands">
+            <summary>
+              <span class="q">Command cheat sheet (most used)</span>
+              <span class="tag">Commands</span>
+            </summary>
+            <div class="a">
+              <p><strong>Setup:</strong> <code>/seteventchannel</code> • <code>/healthcheck</code></p>
+              <p><strong>Create:</strong> <code>/addevent</code></p>
+              <p><strong>Browse:</strong> <code>/listevents</code> • <code>/nextevent</code> • <code>/eventinfo</code></p>
+              <p><strong>Edit:</strong> <code>/editevent</code> • <code>/dupeevent</code> • <code>/removeevent</code></p>
+              <p><strong>Reminders:</strong> <code>/remindall</code> • <code>/setmilestones</code> • <code>/resetmilestones</code> • <code>/silence</code></p>
+              <p><strong>Customization:</strong> <code>/theme</code> • <code>/banner set</code> • <code>/banner clear</code></p>
+              <p><strong>Supporter:</strong> <code>/vote</code> • <code>/vote_debug</code></p>
+              <p><strong>Maintenance:</strong> <code>/update_countdown</code> • <code>/resendsetup</code> • <code>/purgeevents</code></p>
+            </div>
+          </details>
 
-		  <!-- Supporter Perks -->
-		  <details data-tags="supporter perks vote locked voting top.gg premium supporter">
-			<summary>
-			  <span class="q">What are “Supporter Perks” (vote-locked features)?</span>
-			  <span class="tag">Supporter</span>
-			</summary>
-			<div class="a">
-			  <p>
-				ChronoBot is free to use, and the core countdown system is available to everyone.
-				“Supporter Perks” are optional upgrades that unlock after you vote for ChronoBot on Top.gg.
-			  </p>
-			  <p>
-				Run <code>/vote</code> for the vote button and to confirm your supporter status.
-			  </p>
-			</div>
-		  </details>
+          <!-- Supporter Perks -->
+          <details data-tags="supporter perks vote locked voting top.gg premium supporter">
+            <summary>
+              <span class="q">What are “Supporter Perks” (vote-locked features)?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                ChronoBot is free to use, and the core countdown system is available to everyone.
+                “Supporter Perks” are optional upgrades that unlock after you vote for ChronoBot on Top.gg.
+              </p>
+              <p>
+                Run <code>/vote</code> for the vote button and to confirm your supporter status.
+              </p>
+              <p>
+                <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required for Supporter Perks.
+              </p>
+            </div>
+          </details>
 
-		  <details data-tags="vote how to vote top.gg unlock supporter perks">
-			<summary>
-			  <span class="q">How do I unlock vote-locked features?</span>
-			  <span class="tag">Supporter</span>
-			</summary>
-			<div class="a">
-			  <p>
-				1) Run <code>/vote</code> in your server.<br/>
-				2) Tap the Vote button (Top.gg will open).<br/>
-				3) Return and run <code>/vote</code> again to confirm you’re unlocked.
-			  </p>
-			  <p>If Top.gg needs a moment to update, wait a minute and retry.</p>
-			</div>
-		  </details>
+          <details data-tags="pro premium paid vote not required supporter perks">
+            <summary>
+              <span class="q">If I have Pro, do I still need to vote to use Supporter Perks?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                No. If your server has <strong>ChronoBot Pro</strong> active, voting is not required for Supporter Perks.
+                Pro includes those perks automatically.
+              </p>
+              <p>
+                Voting is still appreciated (and helps discovery), but it’s optional once Pro is active.
+              </p>
+            </div>
+          </details>
 
-		  <details data-tags="supporter perks list premium features theme milestones templates banner digest">
-			<summary>
-			  <span class="q">Which features are vote-locked (Supporter Perks)?</span>
-			  <span class="tag">Supporter</span>
-			</summary>
-			<div class="a">
-			  <ul>
-				<li><strong>Themes</strong>: <code>/theme</code></li>
-				<li><strong>Advanced milestones</strong>: <code>/milestones advanced</code></li>
-				<li><strong>Templates</strong>: <code>/template save</code> + <code>/template load</code></li>
-				<li><strong>Banners</strong>: <code>/banner set</code></li>
-				<li><strong>Weekly digest</strong>: <code>/digest enable</code></li>
-			  </ul>
-			  <p>
-				These are quality-of-life upgrades: less repetition, more customization, and nicer presentation.
-			  </p>
-			</div>
-		  </details>
+          <details data-tags="vote how to vote top.gg unlock supporter perks">
+            <summary>
+              <span class="q">How do I unlock vote-locked features?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <p>
+                1) Run <code>/vote</code> in your server.<br/>
+                2) Tap the Vote button (Top.gg will open).<br/>
+                3) Return and run <code>/vote</code> again to confirm you’re unlocked.
+              </p>
+              <p>If Top.gg needs a moment to update, wait a minute and retry.</p>
+            </div>
+          </details>
 
-		  <!-- Themes -->
-		  <details data-tags="theme themes supporter perk look style pinned embed refresh">
-			<summary>
-			  <span class="q">I changed the theme, but the pinned embed didn’t change. Why?</span>
-			  <span class="tag">Troubleshooting</span>
-			</summary>
-			<div class="a">
-			  <p>
-				Theme changes affect how the pinned countdown embed is rendered. If it doesn’t update immediately,
-				try <code>/update_countdown</code> or wait for the next auto-refresh cycle.
-			  </p>
-			  <p>
-				If it still doesn’t change: run <code>/healthcheck</code> and confirm Chromie can
-				<code>Read Message History</code> and <code>Embed Links</code> in the event channel.
-			  </p>
-			</div>
-		  </details>
+          <details data-tags="supporter perks list premium features theme milestones templates banner digest">
+            <summary>
+              <span class="q">Which features are vote-locked (Supporter Perks)?</span>
+              <span class="tag">Supporter</span>
+            </summary>
+            <div class="a">
+              <ul>
+                <li><strong>Themes</strong>: <code>/theme</code></li>
+                <li><strong>Advanced milestones</strong>: <code>/milestones advanced</code></li>
+                <li><strong>Templates</strong>: <code>/template save</code> + <code>/template load</code></li>
+                <li><strong>Banners</strong>: <code>/banner set</code></li>
+                <li><strong>Weekly digest</strong>: <code>/digest enable</code></li>
+              </ul>
+              <p>
+                These are quality-of-life upgrades: less repetition, more customization, and nicer presentation.
+              </p>
+              <p>
+                <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required for these perks.
+              </p>
+            </div>
+          </details>
 
-		  <!-- Banner -->
-		  <details data-tags="banner image url direct link hero image pinned embed">
-			<summary>
-			  <span class="q">How do banners work (and what kind of URL do I need)?</span>
-			  <span class="tag">Customization</span>
-			</summary>
-			<div class="a">
-			  <p>
-				Banners add a hero image to the pinned countdown embed. ChronoBot usually displays the banner for the
-				<strong>next upcoming</strong> event that has a banner set.
-			  </p>
-			  <p>
-				Use a <strong>direct image URL</strong> ending in <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, or <code>.webp</code>.
-			  </p>
-			  <p>Example: <code>/banner set index: 1 url: https://example.com/mybanner.png</code></p>
-			  <p><strong>If your banner isn’t showing:</strong></p>
-			  <ul>
-				<li>The link isn’t a direct image file</li>
-				<li>The banner is on an event that isn’t the next upcoming event</li>
-				<li>The event is in the past</li>
-				<li>The bot lacks <code>Embed Links</code> permission</li>
-			  </ul>
-			</div>
-		  </details>
+          <!-- Themes -->
+          <details data-tags="theme themes supporter perk look style pinned embed refresh">
+            <summary>
+              <span class="q">I changed the theme, but the pinned embed didn’t change. Why?</span>
+              <span class="tag">Troubleshooting</span>
+            </summary>
+            <div class="a">
+              <p>
+                Theme changes affect how the pinned countdown embed is rendered. If it doesn’t update immediately,
+                try <code>/update_countdown</code> or wait for the next auto-refresh cycle.
+              </p>
+              <p>
+                If it still doesn’t change: run <code>/healthcheck</code> and confirm Chromie can
+                <code>Read Message History</code> and <code>Embed Links</code> in the event channel.
+              </p>
+            </div>
+          </details>
 
-		  <!-- Permissions -->
-		  <details data-tags="permissions setup send messages embed links pin messages read message history manage messages">
-			  <summary>
-			    <span class="q">Which permissions does ChronoBot need?</span>
-			    <span class="tag">Permissions</span>
-			  </summary>
-			  <div class="a">
-			    <p>In the countdown channel, ChronoBot typically needs:</p>
-			    <ul>
-			      <li><strong>View Channel</strong></li>
-			      <li><strong>Send Messages</strong></li>
-			      <li><strong>Embed Links</strong></li>
-			      <li><strong>Read Message History</strong> (to find/update its pinned message)</li>
-			      <li><strong>Pin Messages</strong> or <strong>Manage Messages</strong> (if pinning is used)</li>
-			      <li><strong>Manage Messages</strong> (to auto-delete milestone announcements and repeating reminders after the event)</li>
-			    </ul>
-			    <p>
-			      If commands work but nothing posts, check channel permission overrides first. Discord’s permission layering is… dramatic.
-			    </p>
-			  </div>
-			</details>
+          <!-- Banner -->
+          <details data-tags="banner image url direct link hero image pinned embed">
+            <summary>
+              <span class="q">How do banners work (and what kind of URL do I need)?</span>
+              <span class="tag">Customization</span>
+            </summary>
+            <div class="a">
+              <p>
+                Banners add a hero image to the pinned countdown embed. ChronoBot usually displays the banner for the
+                <strong>next upcoming</strong> event that has a banner set.
+              </p>
+              <p>
+                Use a <strong>direct image URL</strong> ending in <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, or <code>.webp</code>.
+              </p>
+              <p>Example: <code>/banner set index: 1 url: https://example.com/mybanner.png</code></p>
+              <p><strong>If your banner isn’t showing:</strong></p>
+              <ul>
+                <li>The link isn’t a direct image file</li>
+                <li>The banner is on an event that isn’t the next upcoming event</li>
+                <li>The event is in the past</li>
+                <li>The bot lacks <code>Embed Links</code> permission</li>
+              </ul>
+            </div>
+          </details>
 
-		  <details data-tags="pinned message cannot access create permissions 403 forbidden read history pin">
-			<summary>
-			  <span class="q">“I couldn’t create or access the pinned countdown message.” What does that mean?</span>
-			  <span class="tag">Troubleshooting</span>
-			</summary>
-			<div class="a">
-			  <p>
-				That message almost always means a permissions issue in the countdown channel. ChronoBot can’t create the pinned message,
-				can’t read history to find it, or can’t pin/update it.
-			  </p>
-			  <p>
-				Fix: confirm <code>Send Messages</code>, <code>Read Message History</code>, <code>Embed Links</code>,
-				and <code>Pin Messages</code>/<code>Manage Messages</code>.
-			  </p>
-			</div>
-		  </details>
+          <!-- Permissions -->
+          <details data-tags="permissions setup send messages embed links pin messages read message history manage messages">
+            <summary>
+              <span class="q">Which permissions does ChronoBot need?</span>
+              <span class="tag">Permissions</span>
+            </summary>
+            <div class="a">
+              <p>In the countdown channel, ChronoBot typically needs:</p>
+              <ul>
+                <li><strong>View Channel</strong></li>
+                <li><strong>Send Messages</strong></li>
+                <li><strong>Embed Links</strong></li>
+                <li><strong>Read Message History</strong> (to find/update its pinned message)</li>
+                <li><strong>Pin Messages</strong> or <strong>Manage Messages</strong> (if pinning is used)</li>
+                <li><strong>Manage Messages</strong> (to auto-delete milestone announcements and repeating reminders after the event)</li>
+              </ul>
+              <p>
+                If commands work but nothing posts, check channel permission overrides first. Discord’s permission layering is… dramatic.
+              </p>
+            </div>
+          </details>
 
-		  <!-- Events -->
-		  <details data-tags="events add edit delete list index autocomplete">
-			<summary>
-			  <span class="q">How do events work in ChronoBot?</span>
-			  <span class="tag">Events</span>
-			</summary>
-			<div class="a">
-			  <p>
-				ChronoBot stores events (name + date/time + optional settings) and shows them in a numbered list.
-				Many management commands reference events by <code>index</code> to keep things fast.
-			  </p>
-			  <p>
-				Best practice: keep names specific (“Guild Raid Night”, “Giveaway Ends”, “Release Day”) so reminders stay readable.
-			  </p>
-			</div>
-		  </details>
+          <details data-tags="pinned message cannot access create permissions 403 forbidden read history pin">
+            <summary>
+              <span class="q">“I couldn’t create or access the pinned countdown message.” What does that mean?</span>
+              <span class="tag">Troubleshooting</span>
+            </summary>
+            <div class="a">
+              <p>
+                That message almost always means a permissions issue in the countdown channel. ChronoBot can’t create the pinned message,
+                can’t read history to find it, or can’t pin/update it.
+              </p>
+              <p>
+                Fix: confirm <code>Send Messages</code>, <code>Read Message History</code>, <code>Embed Links</code>,
+                and <code>Pin Messages</code>/<code>Manage Messages</code>.
+              </p>
+            </div>
+          </details>
 
-		  <details data-tags="passed events expired auto prune delete cleanup archivepast">
-			<summary>
-			  <span class="q">What happens when an event passes?</span>
-			  <span class="tag">Events</span>
-			</summary>
-			<div class="a">
-			  <p>
-				When an event passes, the pinned countdown will move on to the next upcoming event.
-				To keep the channel tidy, ChronoBot can also clean up reminder posts after the event.
-			  </p>
-			  <p>
-				<strong>Reminder cleanup:</strong> milestone announcements and repeating reminders stay visible while the event is upcoming,
-				then they’re deleted <strong>24 hours after the event time</strong> (if the bot has permission to delete messages).
-			  </p>
-			</div>
-		  </details>
+          <!-- Events -->
+          <details data-tags="events add edit delete list index autocomplete">
+            <summary>
+              <span class="q">How do events work in ChronoBot?</span>
+              <span class="tag">Events</span>
+            </summary>
+            <div class="a">
+              <p>
+                ChronoBot stores events (name + date/time + optional settings) and shows them in a numbered list.
+                Many management commands reference events by <code>index</code> to keep things fast.
+              </p>
+              <p>
+                Best practice: keep names specific (“Guild Raid Night”, “Giveaway Ends”, “Release Day”) so reminders stay readable.
+              </p>
+            </div>
+          </details>
 
-		  <!-- Reminders -->
-		  <details data-tags="reminders milestones setmilestones resetmilestones remindall silence">
-			<summary>
-			  <span class="q">How do reminders work?</span>
-			  <span class="tag">Reminders</span>
-			</summary>
-			<div class="a">
-			  <p>
-				Reminders can fire automatically at milestone intervals (days before the event), or manually with <code>/remindall</code>.
-				You can customize milestone days per event and disable reminders for an event without removing it.
-			  </p>
-			  <p>
-				If reminders don’t ping who you expect, confirm role mentions are allowed and the bot is permitted to mention them in that channel.
-			  </p>
-			</div>
-		  </details>
+          <details data-tags="passed events expired auto prune delete cleanup archivepast">
+            <summary>
+              <span class="q">What happens when an event passes?</span>
+              <span class="tag">Events</span>
+            </summary>
+            <div class="a">
+              <p>
+                When an event passes, the pinned countdown will move on to the next upcoming event.
+                To keep the channel tidy, ChronoBot can also clean up reminder posts after the event.
+              </p>
+              <p>
+                <strong>Reminder cleanup:</strong> milestone announcements and repeating reminders stay visible while the event is upcoming,
+                then they’re deleted <strong>24 hours after the event time</strong> (if the bot has permission to delete messages).
+              </p>
+            </div>
+          </details>
 
-		  <!-- ✅ NEW: Auto-cleanup FAQ -->
-		  <details data-tags="reminders cleanup auto delete milestone announcements repeating reminders clutter 24 hours manage messages">
-			<summary>
-			  <span class="q">Do milestone announcements and repeating reminders get deleted?</span>
-			  <span class="tag">Reminders</span>
-			</summary>
-			<div class="a">
-			  <p>
-				Yes. To prevent the countdown channel from getting cluttered, ChronoBot can automatically clean up its reminder posts.
-			  </p>
-			  <p>
-				<strong>How it works:</strong>
-			  </p>
-			  <ul>
-				<li>Milestone announcements and repeating reminders stay visible while the event is upcoming.</li>
-				<li>After the event time passes, ChronoBot deletes those reminder posts <strong>24 hours later</strong>.</li>
-			  </ul>
-			  <p>
-				<strong>Required permission:</strong> ChronoBot needs <code>Manage Messages</code> in the countdown channel to delete messages.
-				If the bot can’t delete messages due to permissions, the reminders will remain.
-			  </p>
-			  <p>
-				<strong>Note:</strong> Auto-cleanup applies to reminder messages ChronoBot can track. Older reminder messages posted before this feature
-				may require manual cleanup.
-			  </p>
-			</div>
-		  </details>
+          <!-- Reminders -->
+          <details data-tags="reminders milestones setmilestones resetmilestones remindall silence">
+            <summary>
+              <span class="q">How do reminders work?</span>
+              <span class="tag">Reminders</span>
+            </summary>
+            <div class="a">
+              <p>
+                Reminders can fire automatically at milestone intervals (days before the event), or manually with <code>/remindall</code>.
+                You can customize milestone days per event and disable reminders for an event without removing it.
+              </p>
+              <p>
+                If reminders don’t ping who you expect, confirm role mentions are allowed and the bot is permitted to mention them in that channel.
+              </p>
+            </div>
+          </details>
 
-		  <details data-tags="repeat repeating reminders setrepeat clearrepeat daily weekly">
-			<summary>
-			  <span class="q">What are repeating reminders?</span>
-			  <span class="tag">Reminders</span>
-			</summary>
-			<div class="a">
-			  <p>
-				Repeating reminders post on a schedule (daily/weekly/etc.) for an event, in addition to milestone reminders.
-				Enable with <code>/setrepeat</code> and disable with <code>/clearrepeat</code>.
-			  </p>
-			</div>
-		  </details>
+          <!-- Auto-cleanup -->
+          <details data-tags="reminders cleanup auto delete milestone announcements repeating reminders clutter 24 hours manage messages">
+            <summary>
+              <span class="q">Do milestone announcements and repeating reminders get deleted?</span>
+              <span class="tag">Reminders</span>
+            </summary>
+            <div class="a">
+              <p>
+                Yes. To prevent the countdown channel from getting cluttered, ChronoBot can automatically clean up its reminder posts.
+              </p>
+              <p><strong>How it works:</strong></p>
+              <ul>
+                <li>Milestone announcements and repeating reminders stay visible while the event is upcoming.</li>
+                <li>After the event time passes, ChronoBot deletes those reminder posts <strong>24 hours later</strong>.</li>
+              </ul>
+              <p>
+                <strong>Required permission:</strong> ChronoBot needs <code>Manage Messages</code> in the countdown channel to delete messages.
+                If the bot can’t delete messages due to permissions, the reminders will remain.
+              </p>
+              <p>
+                <strong>Note:</strong> Auto-cleanup applies to reminder messages ChronoBot can track. Older reminder messages posted before this feature
+                may require manual cleanup.
+              </p>
+            </div>
+          </details>
 
-		  <details data-tags="autocomplete index numbers not showing discord client">
-			<summary>
-			  <span class="q">Why don’t I see autocomplete for event index fields?</span>
-			  <span class="tag">Troubleshooting</span>
-			</summary>
-			<div class="a">
-			  <p>
-				Autocomplete only appears if the command option is wired to an autocomplete handler.
-				If you expected autocomplete and it’s missing, it may be a command-definition issue or a Discord client quirk.
-			  </p>
-			  <p>
-				Report it in the support server with the command name, screenshots, and whether you’re on desktop/mobile.
-			  </p>
-			</div>
-		  </details>
+          <details data-tags="repeat repeating reminders setrepeat clearrepeat daily weekly">
+            <summary>
+              <span class="q">What are repeating reminders?</span>
+              <span class="tag">Reminders</span>
+            </summary>
+            <div class="a">
+              <p>
+                Repeating reminders post on a schedule (daily/weekly/etc.) for an event, in addition to milestone reminders.
+                Enable with <code>/setrepeat</code> and disable with <code>/clearrepeat</code>.
+              </p>
+            </div>
+          </details>
 
-		  <!-- Suggestions -->
-		  <details data-tags="suggestions best practices naming channels roles">
-			<summary>
-			  <span class="q">Best practices (recommended server setup)</span>
-			  <span class="tag">Suggestions</span>
-			</summary>
-			<div class="a">
-			  <ul>
-				<li>Create a dedicated events channel (ex: <code>#events</code> or <code>#countdowns</code>).</li>
-				<li>Keep event names specific so reminders make sense.</li>
-				<li>If you use role pings, create one role (ex: “Event Pings”) and let people opt in.</li>
-				<li>Use <code>/dupeevent</code> for recurring formats so you don’t rebuild everything.</li>
-				<li>Use a banner only for “headline” events so the pinned embed stays clean.</li>
-			  </ul>
-			</div>
-		  </details>
+          <details data-tags="autocomplete index numbers not showing discord client">
+            <summary>
+              <span class="q">Why don’t I see autocomplete for event index fields?</span>
+              <span class="tag">Troubleshooting</span>
+            </summary>
+            <div class="a">
+              <p>
+                Autocomplete only appears if the command option is wired to an autocomplete handler.
+                If you expected autocomplete and it’s missing, it may be a command-definition issue or a Discord client quirk.
+              </p>
+              <p>
+                Report it in the support server with the command name, screenshots, and whether you’re on desktop/mobile.
+              </p>
+            </div>
+          </details>
 
-		  <!-- Privacy -->
-		  <details data-tags="data privacy storage logs tracking">
-			<summary>
-			  <span class="q">What data does ChronoBot store?</span>
-			  <span class="tag">Privacy</span>
-			</summary>
-			<div class="a">
-			  <p>
-				ChronoBot stores server configuration needed to function (like which channel to post in) and event/reminder data you create.
-				It does not read your private messages for content.
-			  </p>
-			</div>
-		  </details>
+          <!-- Suggestions -->
+          <details data-tags="suggestions best practices naming channels roles">
+            <summary>
+              <span class="q">Best practices (recommended server setup)</span>
+              <span class="tag">Suggestions</span>
+            </summary>
+            <div class="a">
+              <ul>
+                <li>Create a dedicated events channel (ex: <code>#events</code> or <code>#countdowns</code>).</li>
+                <li>Keep event names specific so reminders make sense.</li>
+                <li>If you use role pings, create one role (ex: “Event Pings”) and let people opt in.</li>
+                <li>Use <code>/dupeevent</code> for recurring formats so you don’t rebuild everything.</li>
+                <li>Use a banner only for “headline” events so the pinned embed stays clean.</li>
+              </ul>
+            </div>
+          </details>
 
-		  <!-- Support -->
-		  <details data-tags="support bug report feature request suggestions response time">
-			<summary>
-			  <span class="q">How do I request a feature or report a bug?</span>
-			  <span class="tag">Support</span>
-			</summary>
-			<div class="a">
-			  <p>
-				Join the support server and post in the appropriate channel (support / bugs / suggestions).
-				For bugs, include reproduction steps and screenshots/logs if possible. For inquiries, reach out to gingeraffee.dev@gmail.com
-			  </p>
-			  <p>Support inquiries typically receive a response within <strong>24 hours or less</strong>.</p>
-			</div>
-		  </details>
+          <!-- Privacy -->
+          <details data-tags="data privacy storage logs tracking">
+            <summary>
+              <span class="q">What data does ChronoBot store?</span>
+              <span class="tag">Privacy</span>
+            </summary>
+            <div class="a">
+              <p>
+                ChronoBot stores server configuration needed to function (like which channel to post in) and event/reminder data you create.
+                It does not read your private messages for content.
+              </p>
+            </div>
+          </details>
 
-		</div>
+          <!-- Support -->
+          <details data-tags="support bug report feature request suggestions response time">
+            <summary>
+              <span class="q">How do I request a feature or report a bug?</span>
+              <span class="tag">Support</span>
+            </summary>
+            <div class="a">
+              <p>
+                Join the support server and post in the appropriate channel (support / bugs / suggestions).
+                For bugs, include reproduction steps and screenshots/logs if possible. For inquiries, reach out to gingeraffee.dev@gmail.com
+              </p>
+              <p>Support inquiries typically receive a response within <strong>24 hours or less</strong>.</p>
+            </div>
+          </details>
 
-			<footer>
-			  <div class="fineprint">
-				© <span id="year"></span> ChronoBot • Built for servers that schedule things like grown-ups.
-			  </div>
-			</footer>
-		  </div>
+        </div>
+
+        <footer>
+          <div class="fineprint">
+            © <span id="year"></span> ChronoBot • Built for servers that schedule things like grown-ups.
+          </div>
+        </footer>
+      </div>
+    </div>
 
   <script>
     const $ = (sel) => document.querySelector(sel);
