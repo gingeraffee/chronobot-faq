@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ChronoBot FAQ</title>
-  <meta name="description" content="ChronoBot FAQ: setup, permissions, countdown channel, reminders, vote-locked supporter features, troubleshooting, and support." />
+  <title>ChronoBot | Features & Pricing</title>
+  <meta name="description" content="ChronoBot (Chromie): professional overview, features, and what's free vs paid." />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -129,9 +129,9 @@
       padding: 0 32px;
     }
 
-    /* Hero section with visual interest */
+    /* Hero section */
     .hero {
-      margin: 40px auto 30px;
+      margin: 40px auto 50px;
       text-align: center;
       position: relative;
       padding: 40px 32px;
@@ -142,7 +142,6 @@
       max-width: 600px;
     }
 
-    /* Decorative background elements */
     .hero::before {
       content: '';
       position: absolute;
@@ -186,94 +185,10 @@
       font-size: 15px;
       color: var(--text-light);
       margin: 0;
-      max-width: 100%;
     }
 
-    /* Search */
-    .search-container {
-      margin: 35px auto 55px;
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-      gap: 12px;
-    }
-
-    .search-wrapper {
-      width: 100%;
-      display: flex;
-      gap: 8px;
-    }
-
-    .search-box {
-      flex: 1;
-      padding: 14px 18px;
-      border: 2px solid var(--border);
-      border-radius: var(--radius);
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      background: var(--white);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: border-color .2s, box-shadow .2s;
-    }
-
-    .search-box:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 4px 16px rgba(109, 40, 217, 0.15);
-    }
-
-    .search-box::placeholder {
-      color: #999;
-    }
-
-    .search-btn {
-      padding: 14px 20px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .2s, transform .1s;
-      box-shadow: 0 4px 12px rgba(109, 40, 217, 0.2);
-      white-space: nowrap;
-    }
-
-    .search-btn:hover {
-      background: var(--accent-dark);
-      transform: translateY(-1px);
-    }
-
-    .search-btn:active {
-      transform: translateY(0);
-    }
-
-    .search-suggestions {
-      margin-top: 8px;
-      font-size: 13px;
-      color: var(--text-light);
-      text-align: center;
-    }
-
-    .search-suggestions span {
-      display: inline-block;
-      background: rgba(109, 40, 217, 0.08);
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 0 4px;
-      cursor: pointer;
-      transition: background .2s;
-    }
-
-    .search-suggestions span:hover {
-      background: rgba(109, 40, 217, 0.15);
-      color: var(--accent);
-    }
-
-    /* FAQ section */
-    .faq-section {
+    /* Features section */
+    .feature-section {
       margin-bottom: 50px;
     }
 
@@ -288,23 +203,23 @@
       letter-spacing: -0.3px;
     }
 
-    .faq-item {
+    .feature-item {
       margin-bottom: 32px;
       padding-bottom: 32px;
       border-bottom: 1px solid var(--border);
     }
 
-    .faq-item:last-child {
+    .feature-item:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: none;
     }
 
-    .faq-item details {
+    .feature-item details {
       cursor: pointer;
     }
 
-    .faq-item summary {
+    .feature-item summary {
       display: flex;
       align-items: flex-start;
       gap: 16px;
@@ -315,15 +230,15 @@
       transition: opacity .2s;
     }
 
-    .faq-item summary:hover {
+    .feature-item summary:hover {
       opacity: 0.7;
     }
 
-    .faq-item summary::-webkit-details-marker {
+    .feature-item summary::-webkit-details-marker {
       display: none;
     }
 
-    .faq-toggle {
+    .feature-toggle {
       flex-shrink: 0;
       width: 24px;
       height: 24px;
@@ -337,11 +252,11 @@
       font-weight: 700;
     }
 
-    .faq-item details[open] .faq-toggle {
+    .feature-item details[open] .feature-toggle {
       transform: rotate(90deg);
     }
 
-    .faq-question {
+    .feature-question {
       font-size: 16px;
       font-weight: 600;
       color: var(--text-dark);
@@ -349,7 +264,7 @@
       line-height: 1.4;
     }
 
-    .faq-tag {
+    .feature-tag {
       display: inline-block;
       font-size: 12px;
       font-weight: 500;
@@ -360,22 +275,22 @@
       margin-top: 8px;
     }
 
-    .faq-answer {
+    .feature-answer {
       margin-top: 16px;
       color: var(--text-light);
       font-size: 15px;
       line-height: 1.7;
     }
 
-    .faq-answer p {
+    .feature-answer p {
       margin: 0 0 12px;
     }
 
-    .faq-answer p:last-child {
+    .feature-answer p:last-child {
       margin-bottom: 0;
     }
 
-    .faq-answer code {
+    .feature-answer code {
       background: var(--accent-light);
       color: var(--accent);
       padding: 3px 6px;
@@ -384,13 +299,27 @@
       font-size: 14px;
     }
 
-    .faq-answer ul {
+    .feature-answer ul {
       margin: 12px 0;
       padding-left: 20px;
     }
 
-    .faq-answer li {
+    .feature-answer li {
       margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: var(--accent-light);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
+      margin: 16px 0;
+    }
+
+    .highlight p {
+      margin: 0;
+      color: var(--text-dark);
+      font-weight: 500;
     }
 
     /* Footer */
@@ -450,7 +379,7 @@
       }
 
       .hero {
-        margin: 30px 0 20px;
+        margin: 30px 0 40px;
         padding: 30px 24px;
         max-width: 100%;
       }
@@ -462,14 +391,6 @@
       .hero::before {
         width: 250px;
         height: 250px;
-      }
-
-      .search-wrapper {
-        flex-direction: column;
-      }
-
-      .search-btn {
-        width: 100%;
       }
 
       .section-title {
@@ -490,8 +411,8 @@
         </div>
       </div>
       <nav>
-        <a href="index.html" class="active">FAQ</a>
-        <a href="chronobot.html">Features & Pricing</a>
+        <a href="index.html">FAQ</a>
+        <a href="chronobot.html" class="active">Features & Pricing</a>
         <a href="../ChronoBot/index.html">Terms & Privacy</a>
         <a href="https://discord.gg/u48GdQuMQr" target="_blank" rel="noreferrer">Support</a>
       </nav>
@@ -501,501 +422,208 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <span class="tagline">FREQUENTLY ASKED QUESTIONS</span>
-        <h2>Everything You Need to Know</h2>
+        <span class="tagline">FEATURES & PRICING</span>
+        <h2>Free, Paid & Everything In Between</h2>
       </div>
     </section>
 
-    <div class="search-container">
-      <div class="search-wrapper">
-        <input type="search" class="search-box" id="search" placeholder="Search FAQs..." />
-        <button class="search-btn">Search</button>
-      </div>
-      <div class="search-suggestions">
-        Try: <span onclick="document.getElementById('search').value='permissions'; document.getElementById('search').dispatchEvent(new Event('input'));">permissions</span>
-        <span onclick="document.getElementById('search').value='theme'; document.getElementById('search').dispatchEvent(new Event('input'));">theme</span>
-        <span onclick="document.getElementById('search').value='reminders'; document.getElementById('search').dispatchEvent(new Event('input'));">reminders</span>
-        <span onclick="document.getElementById('search').value='supporter perks'; document.getElementById('search').dispatchEvent(new Event('input'));">supporter perks</span>
-      </div>
-    </div>
+    <!-- Overview -->
+    <section class="feature-section">
+      <h3 class="section-title">What ChronoBot Does</h3>
 
-    <!-- Getting Started -->
-    <section class="faq-section">
-      <h3 class="section-title">Getting Started</h3>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">What is ChronoBot?</h4>
-              <span class="faq-tag">Getting Started</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              ChronoBot helps servers track events with countdowns and reminders. It keeps one pinned "source of truth"
-              for upcoming dates, plus automated reminders so your server doesn't get haunted by "wait when is it again?"
-              every five minutes.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
+      <div class="feature-item">
         <details open>
           <summary>
-            <span class="faq-toggle">→</span>
+            <span class="feature-toggle">→</span>
             <div>
-              <h4 class="faq-question">What do I need to set up first?</h4>
-              <span class="faq-tag">Getting Started</span>
+              <h4 class="feature-question">What ChronoBot does</h4>
+              <span class="feature-tag">Overview</span>
             </div>
           </summary>
-          <div class="faq-answer">
-            <p><strong>Three-step setup:</strong></p>
-            <ul>
-              <li>Pick your events channel → <code>/seteventchannel</code></li>
-              <li>Set your timezone → <code>/timezone</code></li>
-              <li>Add an event → <code>/addevent</code></li>
-            </ul>
+          <div class="feature-answer">
             <p>
-              <strong>Important:</strong> Event times should be provided in 24-hour format (e.g., 14:30 for 2:30 PM, not 2:30 PM).
-              Your timezone setting ensures countdown timings are accurate for your server's location.
+              ChronoBot keeps a single pinned countdown panel in your chosen channel and updates it automatically.
+              It also sends reminders so your server doesn't have to rely on memory, screenshots, or "wait what day is that again?"
             </p>
             <p>
-              If the pinned message doesn't appear, it's almost always a channel permission issue.
-              Check <code>View Channel</code>, <code>Send Messages</code>, <code>Embed Links</code>,
-              <code>Read Message History</code>, and <code>Pin Messages</code>/<code>Manage Messages</code>.
+              The core countdown system is free. Pro unlocks unlimited events and removes the need to vote for Supporter Perks.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="feature-section">
+      <h3 class="section-title">Pricing</h3>
+
+      <div class="feature-item">
+        <details open>
+          <summary>
+            <span class="feature-toggle">→</span>
+            <div>
+              <h4 class="feature-question">ChronoBot Pro</h4>
+              <span class="feature-tag">Pro</span>
+            </div>
+          </summary>
+          <div class="feature-answer">
+            <div class="highlight">
+              <p>ChronoBot Pro (Server): $2.99/month</p>
+            </div>
+            <p>
+              Pro is a server subscription (Guild) that unlocks premium features for everyone in that server. No voting required—all Supporter Perks are included.
             </p>
           </div>
         </details>
       </div>
 
-      <div class="faq-item">
+      <div class="feature-item">
         <details>
           <summary>
-            <span class="faq-toggle">→</span>
+            <span class="feature-toggle">→</span>
             <div>
-              <h4 class="faq-question">Command cheat sheet (most used)</h4>
-              <span class="faq-tag">Commands</span>
+              <h4 class="feature-question">Free vs Pro (what you get)</h4>
+              <span class="feature-tag">Comparison</span>
             </div>
           </summary>
-          <div class="faq-answer">
-            <p><strong>Setup:</strong> <code>/seteventchannel</code> • <code>/healthcheck</code></p>
-            <p><strong>Create:</strong> <code>/addevent</code></p>
-            <p><strong>Browse:</strong> <code>/listevents</code> • <code>/nextevent</code> • <code>/eventinfo</code></p>
-            <p><strong>Edit:</strong> <code>/editevent</code> • <code>/dupeevent</code> • <code>/removeevent</code></p>
-            <p><strong>Reminders:</strong> <code>/remindall</code> • <code>/setmilestones</code> • <code>/resetmilestones</code> • <code>/silence</code></p>
-            <p><strong>Customization:</strong> <code>/theme</code> • <code>/banner set</code> • <code>/banner clear</code></p>
-            <p><strong>Supporter:</strong> <code>/vote</code> • <code>/vote_debug</code></p>
-            <p><strong>Maintenance:</strong> <code>/update_countdown</code> • <code>/resendsetup</code> • <code>/purgeevents</code></p>
+          <div class="feature-answer">
+            <p><strong>Free (Included):</strong></p>
+            <ul>
+              <li>Pinned countdown board</li>
+              <li><strong>Up to 3 events</strong> per server</li>
+              <li>Standard milestone reminders</li>
+              <li>Core commands + setup help (<code>/healthcheck</code>)</li>
+            </ul>
+
+            <p><strong>Supporter (Vote-locked):</strong></p>
+            <ul>
+              <li><strong>Up to 5 events</strong> per server</li>
+              <li>All Supporter Perks (themes, banners, templates, advanced milestones, weekly digest)</li>
+              <li>Unlock by voting on Top.gg</li>
+            </ul>
+
+            <p><strong>Pro (Server Subscription):</strong></p>
+            <ul>
+              <li><strong>Unlimited events</strong> per server</li>
+              <li><strong>All Supporter Perks included</strong> (no voting required)</li>
+              <li>Themes, banners, templates, advanced milestones, weekly digest</li>
+              <li>Priority support lane (Pro servers)</li>
+            </ul>
+
+            <p>
+              <strong>Important:</strong> If your server has Pro active, voting is optional. You're already unlocked.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="feature-item">
+        <details>
+          <summary>
+            <span class="feature-toggle">→</span>
+            <div>
+              <h4 class="feature-question">Why does Pro exist?</h4>
+              <span class="feature-tag">Info</span>
+            </div>
+          </summary>
+          <div class="feature-answer">
+            <p>
+              Pro helps fund hosting, ongoing development, and support. It also keeps the free tier generous while giving power servers
+              a simple way to scale up. No ads, no data selling—just quality service.
+            </p>
           </div>
         </details>
       </div>
     </section>
 
     <!-- Supporter Perks -->
-    <section class="faq-section">
-      <h3 class="section-title">Supporter Perks & Pricing</h3>
+    <section class="feature-section">
+      <h3 class="section-title">Supporter Perks</h3>
 
-      <div class="faq-item">
+      <div class="feature-item">
         <details>
           <summary>
-            <span class="faq-toggle">→</span>
+            <span class="feature-toggle">→</span>
             <div>
-              <h4 class="faq-question">What are "Supporter Perks" (vote-locked features)?</h4>
-              <span class="faq-tag">Supporter</span>
+              <h4 class="feature-question">What are Supporter Perks?</h4>
+              <span class="feature-tag">Supporter</span>
             </div>
           </summary>
-          <div class="faq-answer">
+          <div class="feature-answer">
             <p>
-              ChronoBot is free to use, and the core countdown system is available to everyone.
-              "Supporter Perks" are optional upgrades that unlock after you vote for ChronoBot on Top.gg.
+              Supporter Perks unlock after you vote for ChronoBot on Top.gg. These are optional upgrades that improve presentation and automation.
             </p>
             <p>
-              Run <code>/vote</code> for the vote button and to confirm your supporter status.
-            </p>
-            <p>
-              <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required for Supporter Perks.
+              <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required. All perks are included.
             </p>
           </div>
         </details>
       </div>
 
-      <div class="faq-item">
+      <div class="feature-item">
         <details>
           <summary>
-            <span class="faq-toggle">→</span>
+            <span class="feature-toggle">→</span>
             <div>
-              <h4 class="faq-question">If I have Pro, do I still need to vote to use Supporter Perks?</h4>
-              <span class="faq-tag">Supporter</span>
+              <h4 class="feature-question">Which features are included in Supporter Perks?</h4>
+              <span class="feature-tag">Supporter</span>
             </div>
           </summary>
-          <div class="faq-answer">
-            <p>
-              No. If your server has <strong>ChronoBot Pro</strong> active, voting is not required for Supporter Perks.
-              Pro includes those perks automatically.
-            </p>
-            <p>
-              Voting is still appreciated (and helps discovery), but it's optional once Pro is active.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">How do I unlock vote-locked features?</h4>
-              <span class="faq-tag">Supporter</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              1) Run <code>/vote</code> in your server.<br/>
-              2) Tap the Vote button (Top.gg will open).<br/>
-              3) Return and run <code>/vote</code> again to confirm you're unlocked.
-            </p>
-            <p>If Top.gg needs a moment to update, wait a minute and retry.</p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">Which features are vote-locked (Supporter Perks)?</h4>
-              <span class="faq-tag">Supporter</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
+          <div class="feature-answer">
             <ul>
-              <li><strong>Themes</strong>: <code>/theme</code></li>
-              <li><strong>Advanced milestones</strong>: <code>/milestones advanced</code></li>
-              <li><strong>Templates</strong>: <code>/template save</code> + <code>/template load</code></li>
-              <li><strong>Banners</strong>: <code>/banner set</code></li>
-              <li><strong>Weekly digest</strong>: <code>/digest enable</code></li>
+              <li><strong>Themes</strong>: <code>/theme</code> — Customize the look of your pinned countdown</li>
+              <li><strong>Advanced milestones</strong>: <code>/milestones advanced</code> — Fine-tune reminder timing</li>
+              <li><strong>Templates</strong>: <code>/template save</code> + <code>/template load</code> — Reuse event setups</li>
+              <li><strong>Banners</strong>: <code>/banner set</code> — Add hero images to your countdown</li>
+              <li><strong>Weekly digest</strong>: <code>/digest enable</code> — Get a weekly summary of events</li>
             </ul>
             <p>
               These are quality-of-life upgrades: less repetition, more customization, and nicer presentation.
             </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="feature-item">
+        <details>
+          <summary>
+            <span class="feature-toggle">→</span>
+            <div>
+              <h4 class="feature-question">How do I unlock Supporter Perks?</h4>
+              <span class="feature-tag">Supporter</span>
+            </div>
+          </summary>
+          <div class="feature-answer">
             <p>
-              <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required for these perks.
+              1) Run <code>/vote</code> in your server.<br/>
+              2) Click the Vote button (Top.gg will open).<br/>
+              3) Return and run <code>/vote</code> again to confirm you're unlocked.
+            </p>
+            <p>
+              If Top.gg needs a moment to update, wait a minute and retry. Voting is optional if your server has Pro.
             </p>
           </div>
         </details>
       </div>
     </section>
 
-    <!-- Themes -->
-    <section class="faq-section">
-      <h3 class="section-title">Customization</h3>
+    <!-- Learn More -->
+    <section class="feature-section">
+      <h3 class="section-title">Learn More</h3>
 
-      <div class="faq-item">
+      <div class="feature-item">
         <details>
           <summary>
-            <span class="faq-toggle">→</span>
+            <span class="feature-toggle">→</span>
             <div>
-              <h4 class="faq-question">I changed the theme, but the pinned embed didn't change. Why?</h4>
-              <span class="faq-tag">Troubleshooting</span>
+              <h4 class="feature-question">Need setup help?</h4>
+              <span class="feature-tag">FAQ</span>
             </div>
           </summary>
-          <div class="faq-answer">
+          <div class="feature-answer">
             <p>
-              Theme changes affect how the pinned countdown embed is rendered. If it doesn't update immediately,
-              try <code>/update_countdown</code> or wait for the next auto-refresh cycle.
+              For commands, permissions, pinned message behavior, and troubleshooting, head to the <a href="index.html">ChronoBot FAQ</a>.
             </p>
-            <p>
-              If it still doesn't change: run <code>/healthcheck</code> and confirm Chromie can
-              <code>Read Message History</code> and <code>Embed Links</code> in the event channel.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">How do banners work (and what kind of URL do I need)?</h4>
-              <span class="faq-tag">Customization</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              Banners add a hero image to the pinned countdown embed. ChronoBot usually displays the banner for the
-              <strong>next upcoming</strong> event that has a banner set.
-            </p>
-            <p>
-              Use a <strong>direct image URL</strong> ending in <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, or <code>.webp</code>.
-            </p>
-            <p>Example: <code>/banner set index: 1 url: https://example.com/mybanner.png</code></p>
-            <p><strong>If your banner isn't showing:</strong></p>
-            <ul>
-              <li>The link isn't a direct image file</li>
-              <li>The banner is on an event that isn't the next upcoming event</li>
-              <li>The event is in the past</li>
-              <li>The bot lacks <code>Embed Links</code> permission</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- Permissions -->
-    <section class="faq-section">
-      <h3 class="section-title">Permissions & Troubleshooting</h3>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">Which permissions does ChronoBot need?</h4>
-              <span class="faq-tag">Permissions</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>In the countdown channel, ChronoBot typically needs:</p>
-            <ul>
-              <li><strong>View Channel</strong></li>
-              <li><strong>Send Messages</strong></li>
-              <li><strong>Embed Links</strong></li>
-              <li><strong>Read Message History</strong> (to find/update its pinned message)</li>
-              <li><strong>Pin Messages</strong> or <strong>Manage Messages</strong> (if pinning is used)</li>
-              <li><strong>Manage Messages</strong> (to auto-delete milestone announcements and repeating reminders after the event)</li>
-            </ul>
-            <p>
-              If commands work but nothing posts, check channel permission overrides first. Discord's permission layering is… dramatic.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">"I couldn't create or access the pinned countdown message." What does that mean?</h4>
-              <span class="faq-tag">Troubleshooting</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              That message almost always means a permissions issue in the countdown channel. ChronoBot can't create the pinned message,
-              can't read history to find it, or can't pin/update it.
-            </p>
-            <p>
-              Fix: confirm <code>Send Messages</code>, <code>Read Message History</code>, <code>Embed Links</code>,
-              and <code>Pin Messages</code>/<code>Manage Messages</code>.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">Why don't I see autocomplete for event index fields?</h4>
-              <span class="faq-tag">Troubleshooting</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              Autocomplete only appears if the command option is wired to an autocomplete handler.
-              If you expected autocomplete and it's missing, it may be a command-definition issue or a Discord client quirk.
-            </p>
-            <p>
-              Report it in the support server with the command name, screenshots, and whether you're on desktop/mobile.
-            </p>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- Events & Reminders -->
-    <section class="faq-section">
-      <h3 class="section-title">Events & Reminders</h3>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">How do events work in ChronoBot?</h4>
-              <span class="faq-tag">Events</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              ChronoBot stores events (name + date/time + optional settings) and shows them in a numbered list.
-              Many management commands reference events by <code>index</code> to keep things fast.
-            </p>
-            <p>
-              Best practice: keep names specific ("Guild Raid Night", "Giveaway Ends", "Release Day") so reminders stay readable.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">What happens when an event passes?</h4>
-              <span class="faq-tag">Events</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              When an event passes, the pinned countdown will move on to the next upcoming event.
-              To keep the channel tidy, ChronoBot can also clean up reminder posts after the event.
-            </p>
-            <p>
-              <strong>Reminder cleanup:</strong> milestone announcements and repeating reminders stay visible while the event is upcoming,
-              then they're deleted <strong>24 hours after the event time</strong> (if the bot has permission to delete messages).
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">How do reminders work?</h4>
-              <span class="faq-tag">Reminders</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              Reminders can fire automatically at milestone intervals (days before the event), or manually with <code>/remindall</code>.
-              You can customize milestone days per event and disable reminders for an event without removing it.
-            </p>
-            <p>
-              If reminders don't ping who you expect, confirm role mentions are allowed and the bot is permitted to mention them in that channel.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">Do milestone announcements and repeating reminders get deleted?</h4>
-              <span class="faq-tag">Reminders</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              Yes. To prevent the countdown channel from getting cluttered, ChronoBot can automatically clean up its reminder posts.
-            </p>
-            <p><strong>How it works:</strong></p>
-            <ul>
-              <li>Milestone announcements and repeating reminders stay visible while the event is upcoming.</li>
-              <li>After the event time passes, ChronoBot deletes those reminder posts <strong>24 hours later</strong>.</li>
-            </ul>
-            <p>
-              <strong>Required permission:</strong> ChronoBot needs <code>Manage Messages</code> in the countdown channel to delete messages.
-              If the bot can't delete messages due to permissions, the reminders will remain.
-            </p>
-            <p>
-              <strong>Note:</strong> Auto-cleanup applies to reminder messages ChronoBot can track. Older reminder messages posted before this feature
-              may require manual cleanup.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">What are repeating reminders?</h4>
-              <span class="faq-tag">Reminders</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              Repeating reminders post on a schedule (daily/weekly/etc.) for an event, in addition to milestone reminders.
-              Enable with <code>/setrepeat</code> and disable with <code>/clearrepeat</code>.
-            </p>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- General -->
-    <section class="faq-section">
-      <h3 class="section-title">General</h3>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">Best practices (recommended server setup)</h4>
-              <span class="faq-tag">Suggestions</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <ul>
-              <li>Create a dedicated events channel (ex: <code>#events</code> or <code>#countdowns</code>).</li>
-              <li>Keep event names specific so reminders make sense.</li>
-              <li>If you use role pings, create one role (ex: "Event Pings") and let people opt in.</li>
-              <li>Use <code>/dupeevent</code> for recurring formats so you don't rebuild everything.</li>
-              <li>Use a banner only for "headline" events so the pinned embed stays clean.</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">What data does ChronoBot store?</h4>
-              <span class="faq-tag">Privacy</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              ChronoBot stores server configuration needed to function (like which channel to post in) and event/reminder data you create.
-              It does not read your private messages for content.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">How do I request a feature or report a bug?</h4>
-              <span class="faq-tag">Support</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              Join the support server and post in the appropriate channel (support / bugs / suggestions).
-              For bugs, include reproduction steps and screenshots/logs if possible. For inquiries, reach out to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92f5fbfcf5f7e0f3f4f4f7f7bcf6f7e4d2f5fff3fbfebcf1fdff">[email&#160;protected]</a>
-            </p>
-            <p>Support inquiries typically receive a response within <strong>24 hours or less</strong>.</p>
           </div>
         </details>
       </div>
@@ -1015,21 +643,5 @@
       <p class="footer-credit">© 2026 ChronoBot • Built for servers that schedule things like grown-ups.</p>
     </div>
   </footer>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    const searchInput = document.getElementById('search');
-    const searchBtn = document.querySelector('.search-btn');
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    function normalizeText(text) {
-      return (text || '').toLowerCase().trim();
-    }
-
-    function filterFAQs() {
-      const query = normalizeText(searchInput.value);
-      let visibleCount = 0;
-
-      faqItems.forEach(item => {
-        const text = normalizeText(item.innerText);
-        const tag = normalizeText(item.querySelector('.faq-tag')?.innerText);
-        const matches = !query || text.includes(query)
+</body>
+</html>
