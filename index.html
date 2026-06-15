@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ChronoBot FAQ</title>
-  <meta name="description" content="ChronoBot FAQ: setup, permissions, countdown channel, reminders, vote-locked supporter features, troubleshooting, and support." />
+  <meta name="description" content="ChronoBot (Chromie) FAQ: setup, the /event and /countdown hubs, per-channel countdowns, reminders, Free/Supporter/Pro tiers, permissions, troubleshooting, and support." />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -515,7 +515,8 @@
         Try: <span onclick="document.getElementById('search').value='permissions'; document.getElementById('search').dispatchEvent(new Event('input'));">permissions</span>
         <span onclick="document.getElementById('search').value='theme'; document.getElementById('search').dispatchEvent(new Event('input'));">theme</span>
         <span onclick="document.getElementById('search').value='reminders'; document.getElementById('search').dispatchEvent(new Event('input'));">reminders</span>
-        <span onclick="document.getElementById('search').value='supporter perks'; document.getElementById('search').dispatchEvent(new Event('input'));">supporter perks</span>
+        <span onclick="document.getElementById('search').value='pro'; document.getElementById('search').dispatchEvent(new Event('input'));">pro</span>
+        <span onclick="document.getElementById('search').value='moved'; document.getElementById('search').dispatchEvent(new Event('input'));">where did my command go?</span>
       </div>
     </div>
 
@@ -534,9 +535,12 @@
           </summary>
           <div class="faq-answer">
             <p>
-              ChronoBot helps servers track events with countdowns and reminders. It keeps one pinned "source of truth"
-              for upcoming dates, plus automated reminders so your server doesn't get haunted by "wait when is it again?"
-              every five minutes.
+              ChronoBot (aka <strong>Chromie</strong>) helps servers track events with countdowns and reminders. Each countdown
+              channel keeps one pinned "source of truth" for upcoming dates, plus automated reminders so your server doesn't get
+              haunted by "wait when is it again?" every five minutes.
+            </p>
+            <p>
+              Everything is <strong>per channel</strong>: each countdown channel has its own events, theme, timezone, and settings.
             </p>
           </div>
         </details>
@@ -552,16 +556,20 @@
             </div>
           </summary>
           <div class="faq-answer">
-            <p><strong>Three-step setup:</strong></p>
+            <p><strong>Three-step setup (about 30 seconds):</strong></p>
             <ul>
-              <li>Pick your events channel → <code>/seteventchannel</code></li>
-              <li>Add an event → <code>/addevent</code></li>
-              <li>Confirm the pinned countdown appears and updates</li>
+              <li>In the channel you want the countdown → <code>/seteventchannel</code></li>
+              <li>Add an event → <code>/addevent date: 04/12/2026 time: 09:00 name: Game Night 🎲</code></li>
+              <li>Chromie pins a countdown and keeps it updated automatically</li>
             </ul>
             <p>
-              If the pinned message doesn't appear, it's almost always a channel permission issue.
-              Check <code>View Channel</code>, <code>Send Messages</code>, <code>Embed Links</code>,
-              <code>Read Message History</code>, and <code>Pin Messages</code>/<code>Manage Messages</code>.
+              Dates use <code>MM/DD/YYYY</code> and times use 24-hour <code>HH:MM</code>. Each channel has its own timezone
+              (default <strong>America/Chicago</strong>) — change it in <code>/countdown</code> → Timezone.
+            </p>
+            <p>
+              If the pinned message doesn't appear, it's almost always a channel permission issue. Run <code>/healthcheck</code>, or
+              check <code>View Channel</code>, <code>Send Messages</code>, <code>Embed Links</code>,
+              <code>Read Message History</code>, and <code>Manage Messages</code>/<code>Pin Messages</code>.
             </p>
           </div>
         </details>
@@ -577,43 +585,79 @@
             </div>
           </summary>
           <div class="faq-answer">
-            <p><strong>Setup:</strong> <code>/seteventchannel</code> • <code>/healthcheck</code></p>
-            <p><strong>Create:</strong> <code>/addevent</code></p>
-            <p><strong>Browse:</strong> <code>/listevents</code> • <code>/nextevent</code> • <code>/eventinfo</code></p>
-            <p><strong>Edit:</strong> <code>/editevent</code> • <code>/dupeevent</code> • <code>/removeevent</code></p>
-            <p><strong>Reminders:</strong> <code>/remindall</code> • <code>/setmilestones</code> • <code>/resetmilestones</code> • <code>/silence</code></p>
-            <p><strong>Customization:</strong> <code>/theme</code> • <code>/banner set</code> • <code>/banner clear</code></p>
-            <p><strong>Supporter:</strong> <code>/vote</code> • <code>/vote_debug</code></p>
-            <p><strong>Maintenance:</strong> <code>/update_countdown</code> • <code>/resendsetup</code> • <code>/purgeevents</code></p>
+            <p>
+              Most management now lives in two interactive hubs — run the command, then pick options from the menu (no need to
+              memorize a dozen sub-commands).
+            </p>
+            <p><strong>Setup:</strong> <code>/seteventchannel</code> • <code>/healthcheck</code> • <code>/resendsetup</code></p>
+            <p><strong>Create &amp; browse:</strong> <code>/addevent</code> • <code>/listevents</code> • <code>/nextevent</code></p>
+            <p><strong>Manage events (hub):</strong> <code>/event</code> — edit, delete, milestones, reminder time, silence, owner, owner DMs, banner, duplicate&nbsp;💎, repeat&nbsp;💎</p>
+            <p><strong>Channel settings (hub):</strong> <code>/countdown</code> — theme, timezone, time format, mention role, auto-delete, title&nbsp;💎, description&nbsp;💎, weekly digest&nbsp;💎, build-your-own theme&nbsp;💎, remove countdown</p>
+            <p><strong>Reminders:</strong> <code>/remindall</code></p>
+            <p><strong>Templates (Pro):</strong> <code>/template save</code> • <code>/template load</code></p>
+            <p><strong>Tiers:</strong> <code>/vote</code> • <code>/vote_debug</code> • <code>/pro_status</code> • <code>/sync_subscription</code></p>
+            <p><strong>DMs:</strong> <code>/linkserver</code></p>
+            <p><strong>Maintenance:</strong> <code>/update_countdown</code> • <code>/purgeevents</code> • <code>/archivepast</code></p>
+            <p><strong>Help:</strong> <code>/chronohelp</code> (paged, with a category dropdown)</p>
+            <p>💎 = Chromie Pro.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-toggle">→</span>
+            <div>
+              <h4 class="faq-question">Where did /editevent, /theme, /banner, /setrepeat… go? (commands moved)</h4>
+              <span class="faq-tag">Commands</span>
+            </div>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              In the latest update, lots of small commands were rolled into two menu-driven hubs. The old commands are gone — use
+              the hub instead:
+            </p>
+            <p><strong>Now in <code>/event</code> (pick an event, then an action):</strong></p>
+            <ul>
+              <li><code>/editevent</code>, <code>/removeevent</code>, <code>/eventinfo</code> → edit / delete / view</li>
+              <li><code>/setmilestones</code>, <code>/resetmilestones</code> → Milestones</li>
+              <li><code>/silence</code> → Silence</li>
+              <li><code>/seteventowner</code>, <code>/cleareventowner</code> → Owner (and Owner DMs)</li>
+              <li><code>/banner set</code>, <code>/banner clear</code> → Banner</li>
+              <li><code>/setrepeat</code>, <code>/clearrepeat</code> → Repeat 💎</li>
+              <li><code>/dupeevent</code> → Duplicate 💎</li>
+            </ul>
+            <p><strong>Now in <code>/countdown</code>:</strong></p>
+            <ul>
+              <li><code>/theme</code> → Theme</li>
+              <li>Timezone, time format, and mention role settings → Timezone / Time format / Mention role</li>
+              <li><code>/digest enable</code> → Weekly digest 💎</li>
+            </ul>
           </div>
         </details>
       </div>
     </section>
 
-    <!-- Supporter Perks -->
+    <!-- Tiers, Supporter & Pro -->
     <section class="faq-section">
-      <h3 class="section-title">Supporter Perks & Pricing</h3>
+      <h3 class="section-title">Tiers, Supporter &amp; Pro</h3>
 
       <div class="faq-item">
-        <details>
+        <details open>
           <summary>
             <span class="faq-toggle">→</span>
             <div>
-              <h4 class="faq-question">What are "Supporter Perks" (vote-locked features)?</h4>
-              <span class="faq-tag">Supporter</span>
+              <h4 class="faq-question">What are the tiers (Free, Supporter, Pro)?</h4>
+              <span class="faq-tag">Pricing</span>
             </div>
           </summary>
           <div class="faq-answer">
-            <p>
-              ChronoBot is free to use, and the core countdown system is available to everyone.
-              "Supporter Perks" are optional upgrades that unlock after you vote for ChronoBot on Top.gg.
-            </p>
-            <p>
-              Run <code>/vote</code> for the vote button and to confirm your supporter status.
-            </p>
-            <p>
-              <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required for Supporter Perks.
-            </p>
+            <p>Chromie has three tiers. The core countdown system is always free.</p>
+            <p><strong>🆓 Free</strong> — up to <strong>3 events</strong>, <strong>1 countdown channel</strong>, all core features, milestone reminders, and full event management.</p>
+            <p><strong>⭐ Supporter</strong> — up to <strong>5 events</strong>, premium themes, and custom event banners. Unlock free by voting on Top.gg (lasts <strong>12 hours</strong> per vote).</p>
+            <p><strong>💎 Pro ($2.99/month)</strong> — <strong>unlimited events</strong>, a separate countdown in <em>every</em> channel, recurring reminders, event templates, event duplication, weekly digest, build-your-own themes, and all Supporter features permanently (no voting). Subscribe via Discord's Server Subscription.</p>
+            <p>See the <a href="chronobot.html">Features &amp; Pricing</a> page for the full breakdown.</p>
           </div>
         </details>
       </div>
@@ -623,38 +667,22 @@
           <summary>
             <span class="faq-toggle">→</span>
             <div>
-              <h4 class="faq-question">If I have Pro, do I still need to vote to use Supporter Perks?</h4>
+              <h4 class="faq-question">What are "Supporter Perks" and how do I unlock them?</h4>
               <span class="faq-tag">Supporter</span>
             </div>
           </summary>
           <div class="faq-answer">
             <p>
-              No. If your server has <strong>ChronoBot Pro</strong> active, voting is not required for Supporter Perks.
-              Pro includes those perks automatically.
+              Supporter Perks are optional upgrades that unlock for free when you vote for Chromie on Top.gg. Each vote unlocks
+              Supporter for <strong>12 hours</strong> — vote again afterward to keep access.
             </p>
+            <p><strong>To unlock:</strong></p>
             <p>
-              Voting is still appreciated (and helps discovery), but it's optional once Pro is active.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">How do I unlock vote-locked features?</h4>
-              <span class="faq-tag">Supporter</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              1) Run <code>/vote</code> in your server.<br/>
-              2) Tap the Vote button (Top.gg will open).<br/>
+              1) Run <code>/vote</code> to get the link and check your status.<br/>
+              2) Click the link and vote (takes about 10 seconds).<br/>
               3) Return and run <code>/vote</code> again to confirm you're unlocked.
             </p>
-            <p>If Top.gg needs a moment to update, wait a minute and retry.</p>
+            <p>If Top.gg needs a moment to update, wait a minute and retry. Admins can use <code>/vote_debug</code> to troubleshoot.</p>
           </div>
         </details>
       </div>
@@ -664,30 +692,62 @@
           <summary>
             <span class="faq-toggle">→</span>
             <div>
-              <h4 class="faq-question">Which features are vote-locked (Supporter Perks)?</h4>
+              <h4 class="faq-question">Which features are Supporter vs Pro?</h4>
               <span class="faq-tag">Supporter</span>
             </div>
           </summary>
           <div class="faq-answer">
+            <p><strong>⭐ Supporter (vote to unlock, free):</strong></p>
             <ul>
-              <li><strong>Themes</strong>: <code>/theme</code></li>
-              <li><strong>Advanced milestones</strong>: <code>/milestones advanced</code></li>
-              <li><strong>Templates</strong>: <code>/template save</code> + <code>/template load</code></li>
-              <li><strong>Banners</strong>: <code>/banner set</code></li>
-              <li><strong>Weekly digest</strong>: <code>/digest enable</code></li>
+              <li>5 events (vs 3 on Free)</li>
+              <li>Premium themes (<code>/countdown</code> → Theme)</li>
+              <li>Custom event banners (<code>/event</code> → Banner)</li>
+              <li>Advanced milestone customization</li>
             </ul>
+            <p><strong>💎 Pro (subscription, includes all Supporter perks permanently):</strong></p>
+            <ul>
+              <li>Unlimited events + a separate countdown in every channel</li>
+              <li>Recurring event reminders (<code>/event</code> → Repeat)</li>
+              <li>Event templates (<code>/template save</code> + <code>/template load</code>)</li>
+              <li>Duplicate events (<code>/event</code> → Duplicate)</li>
+              <li>Weekly digest summaries (<code>/countdown</code> → Weekly digest)</li>
+              <li>Build-your-own themes — custom color, emoji, title &amp; footer (<code>/countdown</code> → Build-your-own theme)</li>
+              <li>Custom pinned-embed title &amp; description (<code>/countdown</code>)</li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-toggle">→</span>
+            <div>
+              <h4 class="faq-question">How do I get Pro, and does voting still matter once I have it?</h4>
+              <span class="faq-tag">Pro</span>
+            </div>
+          </summary>
+          <div class="faq-answer">
             <p>
-              These are quality-of-life upgrades: less repetition, more customization, and nicer presentation.
+              Chromie Pro is <strong>$2.99/month per server</strong>, purchased through <strong>Discord's Server Subscription</strong>
+              (in the bot's Discord Store). Pro unlocks for the <strong>entire server</strong> — all admins get Pro features — and you
+              can cancel anytime in Discord's subscription settings.
             </p>
             <p>
-              <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required for these perks.
+              Check status with <code>/pro_status</code>. If Discord and Chromie ever look out of sync after subscribing, an admin can
+              run <code>/sync_subscription</code>.
+            </p>
+            <p>
+              <strong>Once Pro is active, voting is optional.</strong> All Supporter perks are included permanently — no 12-hour
+              vote window to maintain. (Voting is still appreciated and helps Chromie grow.)
             </p>
           </div>
         </details>
       </div>
     </section>
 
-    <!-- Themes -->
+    <!-- Customization -->
     <section class="faq-section">
       <h3 class="section-title">Customization</h3>
 
@@ -696,18 +756,41 @@
           <summary>
             <span class="faq-toggle">→</span>
             <div>
-              <h4 class="faq-question">I changed the theme, but the pinned embed didn't change. Why?</h4>
+              <h4 class="faq-question">How do I change the theme (and preview it first)?</h4>
+              <span class="faq-tag">Customization</span>
+            </div>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Run <code>/countdown</code> → <strong>Theme</strong>. Chromie ships nearly 20 themes — sports, cute, spooky, seasonal
+              drops and more — and you can <strong>preview a theme before applying it</strong>. Premium themes need an active
+              <code>/vote</code> (Supporter) or Chromie Pro.
+            </p>
+            <p>
+              <strong>Pro:</strong> build your own theme with custom color, emoji, title and footer via <code>/countdown</code> →
+              Build-your-own theme.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-toggle">→</span>
+            <div>
+              <h4 class="faq-question">I changed a setting, but the pinned embed didn't update. Why?</h4>
               <span class="faq-tag">Troubleshooting</span>
             </div>
           </summary>
           <div class="faq-answer">
             <p>
-              Theme changes affect how the pinned countdown embed is rendered. If it doesn't update immediately,
-              try <code>/update_countdown</code> or wait for the next auto-refresh cycle.
+              The pinned countdown refreshes automatically, but if a theme or setting change doesn't show right away, run
+              <code>/update_countdown</code> to force a refresh, or wait for the next auto-refresh cycle.
             </p>
             <p>
-              If it still doesn't change: run <code>/healthcheck</code> and confirm Chromie can
-              <code>Read Message History</code> and <code>Embed Links</code> in the event channel.
+              If it still doesn't change, run <code>/healthcheck</code> and confirm Chromie can <code>Read Message History</code>
+              and <code>Embed Links</code> in that channel.
             </p>
           </div>
         </details>
@@ -724,13 +807,12 @@
           </summary>
           <div class="faq-answer">
             <p>
-              Banners add a hero image to the pinned countdown embed. ChronoBot usually displays the banner for the
-              <strong>next upcoming</strong> event that has a banner set.
+              Banners add a hero image to the pinned countdown embed. Set one per event in <code>/event</code> → <strong>Banner</strong>.
+              Chromie displays the banner for the <strong>next upcoming</strong> event that has a banner set.
             </p>
             <p>
               Use a <strong>direct image URL</strong> ending in <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, or <code>.webp</code>.
             </p>
-            <p>Example: <code>/banner set index: 1 url: https://example.com/mybanner.png</code></p>
             <p><strong>If your banner isn't showing:</strong></p>
             <ul>
               <li>The link isn't a direct image file</li>
@@ -738,6 +820,7 @@
               <li>The event is in the past</li>
               <li>The bot lacks <code>Embed Links</code> permission</li>
             </ul>
+            <p>Banners are a Supporter/Pro perk.</p>
           </div>
         </details>
       </div>
@@ -800,17 +883,20 @@
           <summary>
             <span class="faq-toggle">→</span>
             <div>
-              <h4 class="faq-question">Why don't I see autocomplete for event index fields?</h4>
-              <span class="faq-tag">Troubleshooting</span>
+              <h4 class="faq-question">Why can't some members see or use /event, /countdown, or /seteventchannel?</h4>
+              <span class="faq-tag">Permissions</span>
             </div>
           </summary>
           <div class="faq-answer">
             <p>
-              Autocomplete only appears if the command option is wired to an autocomplete handler.
-              If you expected autocomplete and it's missing, it may be a command-definition issue or a Discord client quirk.
+              The setup and management commands (<code>/seteventchannel</code>, <code>/event</code>, <code>/countdown</code>,
+              <code>/purgeevents</code>, etc.) require the <strong>Manage Server</strong> permission and are hidden from members who
+              don't have it. That's intentional, so regular members can't reconfigure your countdowns.
             </p>
             <p>
-              Report it in the support server with the command name, screenshots, and whether you're on desktop/mobile.
+              Anyone can still use the read-only commands like <code>/listevents</code>, <code>/nextevent</code>, and
+              <code>/chronohelp</code>. If an admin <em>has</em> Manage Server but the command still won't run, check for a
+              channel-level permission override.
             </p>
           </div>
         </details>
@@ -832,8 +918,9 @@
           </summary>
           <div class="faq-answer">
             <p>
-              ChronoBot stores events (name + date/time + optional settings) and shows them in a numbered list.
-              Many management commands reference events by <code>index</code> to keep things fast.
+              Chromie stores events (name + date/time + optional settings) per countdown channel and shows them in a numbered list
+              (<code>/listevents</code>). Open <code>/event</code> to pick an event and manage everything about it — edit, delete,
+              milestones, reminder time, silence, owner, owner DMs, banner, and (on Pro) repeat and duplicate.
             </p>
             <p>
               Best practice: keep names specific ("Guild Raid Night", "Giveaway Ends", "Release Day") so reminders stay readable.
@@ -853,12 +940,11 @@
           </summary>
           <div class="faq-answer">
             <p>
-              When an event passes, the pinned countdown will move on to the next upcoming event.
-              To keep the channel tidy, ChronoBot can also clean up reminder posts after the event.
+              The pinned countdown moves on to the next upcoming event, and <strong>past events auto-remove after they pass</strong>
+              so the list stays tidy. You can also clear them out yourself anytime with <code>/archivepast</code> (across all channels).
             </p>
             <p>
-              <strong>Reminder cleanup:</strong> milestone announcements and repeating reminders stay visible while the event is upcoming,
-              then they're deleted <strong>24 hours after the event time</strong> (if the bot has permission to delete messages).
+              Chromie can also clean up its own reminder posts — see the auto-delete question below.
             </p>
           </div>
         </details>
@@ -869,47 +955,50 @@
           <summary>
             <span class="faq-toggle">→</span>
             <div>
-              <h4 class="faq-question">How do reminders work?</h4>
+              <h4 class="faq-question">How do reminders and milestones work?</h4>
               <span class="faq-tag">Reminders</span>
             </div>
           </summary>
           <div class="faq-answer">
             <p>
-              Reminders can fire automatically at milestone intervals (days before the event), or manually with <code>/remindall</code>.
-              You can customize milestone days per event and disable reminders for an event without removing it.
+              Reminders fire automatically at milestone intervals — by default <strong>100, 60, 30, 14, 7, 2, 1, and 0 days</strong>
+              before an event — and post in the countdown channel. You can also post one on demand with <code>/remindall</code>.
             </p>
-            <p>
-              If reminders don't ping who you expect, confirm role mentions are allowed and the bot is permitted to mention them in that channel.
-            </p>
-          </div>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>
-            <span class="faq-toggle">→</span>
-            <div>
-              <h4 class="faq-question">Do milestone announcements and repeating reminders get deleted?</h4>
-              <span class="faq-tag">Reminders</span>
-            </div>
-          </summary>
-          <div class="faq-answer">
-            <p>
-              Yes. To prevent the countdown channel from getting cluttered, ChronoBot can automatically clean up its reminder posts.
-            </p>
-            <p><strong>How it works:</strong></p>
+            <p>Per event, in <code>/event</code> you can:</p>
             <ul>
-              <li>Milestone announcements and repeating reminders stay visible while the event is upcoming.</li>
-              <li>After the event time passes, ChronoBot deletes those reminder posts <strong>24 hours later</strong>.</li>
+              <li><strong>Milestones</strong> — set custom milestone days or reset to default</li>
+              <li><strong>Reminder time</strong> — set the day-of reminder time (or clear it)</li>
+              <li><strong>Silence</strong> — pause an event's reminders without deleting it</li>
             </ul>
             <p>
-              <strong>Required permission:</strong> ChronoBot needs <code>Manage Messages</code> in the countdown channel to delete messages.
-              If the bot can't delete messages due to permissions, the reminders will remain.
+              Pick who gets pinged with <code>/countdown</code> → Mention role. If reminders don't ping who you expect, confirm role
+              mentions are allowed and the bot can mention them in that channel.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-toggle">→</span>
+            <div>
+              <h4 class="faq-question">Do milestone and reminder posts get deleted automatically?</h4>
+              <span class="faq-tag">Reminders</span>
+            </div>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              By default, yes — to keep the countdown channel from getting cluttered, Chromie auto-deletes its milestone and reminder
+              announcements <strong>24 hours after they're posted</strong>. This is a per-channel setting.
             </p>
             <p>
-              <strong>Note:</strong> Auto-cleanup applies to reminder messages ChronoBot can track. Older reminder messages posted before this feature
-              may require manual cleanup.
+              To change it, run <code>/countdown</code> → <strong>Auto-delete posts</strong> and choose <em>Auto-delete after 24h</em>
+              (default) or <em>Keep forever</em>.
+            </p>
+            <p>
+              <strong>Required permission:</strong> Chromie needs <code>Manage Messages</code> in the channel to delete posts. If it
+              can't, the posts simply stay.
             </p>
           </div>
         </details>
@@ -926,9 +1015,10 @@
           </summary>
           <div class="faq-answer">
             <p>
-              Repeating reminders post on a schedule (daily/weekly/etc.) for an event, in addition to milestone reminders.
-              Enable with <code>/setrepeat</code> and disable with <code>/clearrepeat</code>.
+              Repeating reminders post on a recurring schedule for an event, in addition to milestone reminders. Set them up in
+              <code>/event</code> → <strong>Repeat</strong>.
             </p>
+            <p>Recurring reminders are a <strong>Chromie Pro</strong> feature.</p>
           </div>
         </details>
       </div>
@@ -950,11 +1040,49 @@
           <div class="faq-answer">
             <ul>
               <li>Create a dedicated events channel (ex: <code>#events</code> or <code>#countdowns</code>).</li>
+              <li>Set the channel's timezone right away in <code>/countdown</code> → Timezone.</li>
               <li>Keep event names specific so reminders make sense.</li>
-              <li>If you use role pings, create one role (ex: "Event Pings") and let people opt in.</li>
-              <li>Use <code>/dupeevent</code> for recurring formats so you don't rebuild everything.</li>
+              <li>If you use role pings, create one role (ex: "Event Pings"), let people opt in, and set it via <code>/countdown</code> → Mention role.</li>
+              <li>On Pro, use <code>/event</code> → Duplicate (or templates) for recurring formats so you don't rebuild everything.</li>
               <li>Use a banner only for "headline" events so the pinned embed stays clean.</li>
             </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-toggle">→</span>
+            <div>
+              <h4 class="faq-question">Can I have more than one countdown?</h4>
+              <span class="faq-tag">Events</span>
+            </div>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Your <strong>first countdown channel is free</strong>. <strong>Chromie Pro</strong> unlocks a separate countdown in
+              <em>every</em> channel — each with its own events, theme, timezone, and settings. Just run <code>/seteventchannel</code>
+              in each channel you want a countdown in.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-toggle">→</span>
+            <div>
+              <h4 class="faq-question">Can I add events from DMs?</h4>
+              <span class="faq-tag">Events</span>
+            </div>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Yes. Run <code>/linkserver</code> inside the server first to link your DMs to it (requires Manage Server). After that,
+              you can DM Chromie <code>/addevent</code> and it'll add the event to your linked server.
+            </p>
           </div>
         </details>
       </div>
@@ -970,8 +1098,9 @@
           </summary>
           <div class="faq-answer">
             <p>
-              ChronoBot stores server configuration needed to function (like which channel to post in) and event/reminder data you create.
-              It does not read your private messages for content.
+              ChronoBot stores server configuration needed to function (like which channels to post in) and the event/reminder data
+              you create. It does not read your private messages for content. See the
+              <a href="../ChronoBot/index.html">Terms &amp; Privacy</a> page for details.
             </p>
           </div>
         </details>

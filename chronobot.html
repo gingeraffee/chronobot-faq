@@ -442,11 +442,13 @@
           </summary>
           <div class="feature-answer">
             <p>
-              ChronoBot keeps a single pinned countdown panel in your chosen channel and updates it automatically.
+              ChronoBot (aka <strong>Chromie</strong>) keeps a pinned countdown panel in your chosen channel and updates it automatically.
               It also sends reminders so your server doesn't have to rely on memory, screenshots, or "wait what day is that again?"
             </p>
             <p>
-              The core countdown system is free. Pro unlocks unlimited events and removes the need to vote for Supporter Perks.
+              Everything is <strong>per channel</strong> — each countdown channel has its own events, theme, timezone, and settings.
+              The core countdown system is free. Pro unlocks unlimited events, a separate countdown in <em>every</em> channel, and
+              removes the need to vote for Supporter Perks.
             </p>
           </div>
         </details>
@@ -471,7 +473,10 @@
               <p>ChronoBot Pro (Server): $2.99/month</p>
             </div>
             <p>
-              Pro is a server subscription (Guild) that unlocks premium features for everyone in that server. No voting required—all Supporter Perks are included.
+              Pro is a <strong>Discord Server Subscription</strong> that unlocks premium features for everyone in that server. No voting required—all Supporter Perks are included permanently, and you can cancel anytime in Discord's subscription settings.
+            </p>
+            <p>
+              Check status anytime with <code>/pro_status</code>. If Discord and Chromie ever look out of sync after subscribing, an admin can run <code>/sync_subscription</code>.
             </p>
           </div>
         </details>
@@ -487,27 +492,32 @@
             </div>
           </summary>
           <div class="feature-answer">
-            <p><strong>Free (Included):</strong></p>
+            <p><strong>🆓 Free (Included):</strong></p>
             <ul>
               <li>Pinned countdown board</li>
-              <li><strong>Up to 3 events</strong> per server</li>
-              <li>Standard milestone reminders</li>
+              <li><strong>Up to 3 events</strong> per channel</li>
+              <li><strong>1 countdown channel</strong></li>
+              <li>Standard milestone reminders + full event management</li>
               <li>Core commands + setup help (<code>/healthcheck</code>)</li>
             </ul>
 
-            <p><strong>Supporter (Vote-locked):</strong></p>
+            <p><strong>⭐ Supporter (Vote-locked, lasts 12 hours):</strong></p>
             <ul>
-              <li><strong>Up to 5 events</strong> per server</li>
-              <li>All Supporter Perks (themes, banners, templates, advanced milestones, weekly digest)</li>
-              <li>Unlock by voting on Top.gg</li>
+              <li><strong>Up to 5 events</strong> per channel</li>
+              <li>Premium themes + custom event banners</li>
+              <li>Advanced milestone customization</li>
+              <li>Unlock free by voting on Top.gg (run <code>/vote</code>)</li>
             </ul>
 
-            <p><strong>Pro (Server Subscription):</strong></p>
+            <p><strong>💎 Pro (Server Subscription, $2.99/mo):</strong></p>
             <ul>
-              <li><strong>Unlimited events</strong> per server</li>
-              <li><strong>All Supporter Perks included</strong> (no voting required)</li>
-              <li>Themes, banners, templates, advanced milestones, weekly digest</li>
-              <li>Priority support lane (Pro servers)</li>
+              <li><strong>Unlimited events</strong></li>
+              <li>A separate countdown in <strong>every channel</strong></li>
+              <li>Recurring reminders, event templates, and event duplication</li>
+              <li>Weekly digest summaries</li>
+              <li>Build-your-own themes + custom embed title/description</li>
+              <li><strong>All Supporter Perks included permanently</strong> (no voting)</li>
+              <li>Priority support</li>
             </ul>
 
             <p>
@@ -551,10 +561,10 @@
           </summary>
           <div class="feature-answer">
             <p>
-              Supporter Perks unlock after you vote for ChronoBot on Top.gg. These are optional upgrades that improve presentation and automation.
+              Supporter Perks unlock for free after you vote for ChronoBot on Top.gg. Each vote unlocks them for <strong>12 hours</strong>—vote again afterward to keep access. They're optional upgrades that improve presentation and customization.
             </p>
             <p>
-              <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required. All perks are included.
+              <strong>Pro note:</strong> If your server has <strong>ChronoBot Pro</strong> active, voting is not required. All perks are included permanently.
             </p>
           </div>
         </details>
@@ -570,16 +580,42 @@
             </div>
           </summary>
           <div class="feature-answer">
+            <p>Voting unlocks the <strong>Supporter</strong> tier:</p>
             <ul>
-              <li><strong>Themes</strong>: <code>/theme</code> — Customize the look of your pinned countdown</li>
-              <li><strong>Advanced milestones</strong>: <code>/milestones advanced</code> — Fine-tune reminder timing</li>
-              <li><strong>Templates</strong>: <code>/template save</code> + <code>/template load</code> — Reuse event setups</li>
-              <li><strong>Banners</strong>: <code>/banner set</code> — Add hero images to your countdown</li>
-              <li><strong>Weekly digest</strong>: <code>/digest enable</code> — Get a weekly summary of events</li>
+              <li><strong>Up to 5 events</strong> per channel (vs 3 on Free)</li>
+              <li><strong>Premium themes</strong>: <code>/countdown</code> → Theme — customize the look of your pinned countdown (preview before applying)</li>
+              <li><strong>Custom banners</strong>: <code>/event</code> → Banner — add a hero image per event</li>
+              <li><strong>Advanced milestone customization</strong>: <code>/event</code> → Milestones — fine-tune reminder timing</li>
             </ul>
             <p>
-              These are quality-of-life upgrades: less repetition, more customization, and nicer presentation.
+              These are quality-of-life upgrades: less repetition, more customization, and nicer presentation. Want unlimited events
+              and automation? See the Pro perks below.
             </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="feature-item">
+        <details>
+          <summary>
+            <span class="feature-toggle">→</span>
+            <div>
+              <h4 class="feature-question">Which features are Pro-only?</h4>
+              <span class="feature-tag">Pro</span>
+            </div>
+          </summary>
+          <div class="feature-answer">
+            <p>Pro includes everything in Supporter (permanently), plus:</p>
+            <ul>
+              <li><strong>Unlimited events</strong> + a separate countdown in <strong>every channel</strong></li>
+              <li><strong>Recurring reminders</strong>: <code>/event</code> → Repeat</li>
+              <li><strong>Event templates</strong>: <code>/template save</code> + <code>/template load</code> — reuse event setups</li>
+              <li><strong>Duplicate events</strong>: <code>/event</code> → Duplicate</li>
+              <li><strong>Weekly digest</strong>: <code>/countdown</code> → Weekly digest — a weekly summary of events</li>
+              <li><strong>Build-your-own themes</strong>: <code>/countdown</code> → Build-your-own theme — custom color, emoji, title &amp; footer</li>
+              <li><strong>Custom embed title &amp; description</strong>: <code>/countdown</code></li>
+              <li><strong>Priority support</strong></li>
+            </ul>
           </div>
         </details>
       </div>
@@ -600,7 +636,7 @@
               3) Return and run <code>/vote</code> again to confirm you're unlocked.
             </p>
             <p>
-              If Top.gg needs a moment to update, wait a minute and retry. Voting is optional if your server has Pro.
+              Supporter stays active for <strong>12 hours</strong> per vote—vote again afterward to keep access. If Top.gg needs a moment to update, wait a minute and retry. Voting is optional if your server has Pro.
             </p>
           </div>
         </details>
